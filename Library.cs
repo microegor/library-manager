@@ -2,7 +2,12 @@ using System.Dynamic;
 
 class Library
 {
-    List<Book> Books { get; set; } = new List<Book>();
+    public List<Book> Books { get; set; } = new List<Book>()
+    {
+        new Book("Book1", "author1", 1961, "isbn1"),
+        new Book("Book2", "author2", 1952, "isbn2"),
+        new Book("Book3", "author2", 2021, "isbn3"),
+    };
 
     public void AddBook(Book book)
     {
@@ -67,7 +72,6 @@ class Library
                 list.Add(item);
             }
         }
-
         return list;
     }
 }
